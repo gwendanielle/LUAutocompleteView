@@ -74,6 +74,9 @@ open class LUAutocompleteView: UIView {
         didSet {
             tableView.reloadData()
             height = tableView.contentSize.height
+            tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+            tableView.layer.borderColor = UIColor( red: 0/255, green: 0/255, blue:0/255, alpha: 0.5 ).cgColor
+            tableView.layer.borderWidth = 1.0
         }
     }
     fileprivate var height: CGFloat = 0 {
